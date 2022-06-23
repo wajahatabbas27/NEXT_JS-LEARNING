@@ -27,3 +27,7 @@ TypeScript files in your pages directory).
 - Babel only takes modern code as input and produces backward-compatible scripts as output. It works as the Transpiler.
 
 - Webpack takes the whole code and creates the bundle for that.
+
+### pages
+
+- We can use the rafce in the pages to work just need to learn the structure, and everything is good and working fine all the way.
