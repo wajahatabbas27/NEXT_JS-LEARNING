@@ -1,5 +1,23 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import fetch from "isomorphic-unfetch";
+
+//this function will be used to do static site generation with incremantal static regenration
+//here revalidate is used to do refetch the queries.
+export async function getStaticProps() {
+  const userReq = await fetch("/api/user");
+  const userData = await userReq.json();
+  const dashboardReq = await fetch("/api/dashboard");
+  const dashboardData = await dashboardReq.json();
+  return {
+    props: {
+      user: userData,
+      data: dashboardData,
+    },
+    revalidate: 600, // time in seconds (10 minutes)
+  };
+}
+
 // import Dynamicpage from "./component/Dynamicpage";
 
 // //dynamic page structure
