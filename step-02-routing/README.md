@@ -14,6 +14,12 @@
   - We can also create a folder name inside the post by using [date] this is a complete dynamic folder therefore which helps us to have dynamic route inside it as well [slug].js is there as well so if we wanted to call that we can do this using the :
     http://localhost:3000/posts/2021-01-01/my-firstpost
 
+- import { useRouter } from "next/router";
+  const router = useRouter();
+  const { slug, date } = router.query;
+
+- This is the technique we must follow to make the routes completely dynamic for us, using the [] braces for the name but the file name must be except the braces here.
+
 ## Using route variables inside our pages
 
 - will be using the routes name inside our pages here so to route to the differet page.
