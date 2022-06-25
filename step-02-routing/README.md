@@ -20,7 +20,50 @@
 
 - This is the technique we must follow to make the routes completely dynamic for us, using the [] braces for the name but the file name must be except the braces here.
 
+- For the Dynamic perspective there will be only one file for the completely dynamic structure in a folder as its only supported by the nextjs.
+
 ## Using route variables inside our pages
 
 - will be using the routes name inside our pages here so to route to the differet page.
 - above we are just using the highly dynamic structure using [] -> this structure of square brackets.
+- created the serversideprops function inside the greet folder inside the dynamic name page and passed the name using params there as it is routed all the way.
+
+## Client-side navigation
+
+- To navigate, we can use the anchor tag in html but nextjs also gives us Link - tag to route as well in the client side of the pages all the way
+  import Link from 'next/link';
+
+- We can also set our paths like this here in the nextjs for the dynamic pages which we created and we wanted to link the pages as well on the client side so we are making a link tag with the reference of the dynamic post
+<Link href='/posts/2021-01-01/happy-new-year'>Post</Link>
+
+- For more complex urls we can also say like this to link the pages all the way
+  href={{
+   pathname: '/blog/[date]/[slug]'
+   query: {
+   date: '2020-01-01',
+   slug: 'happy-new-year',
+   foo: 'bar'
+   }
+   }}
+
+### router.push to navigate
+
+- we can also make links using the router.push if we want to navigate to a particular page
+  router.push('/login')
+
+- For the router.push technique whenever we wanted to send back to the page without clicking we can send using the router.push as we have implemented the logic here in the useEffect.
+  const [loggedIn, setLoggedIn] = useState(false);
+
+        const router = useRouter();
+
+        useEffect(() => {
+          //Add login code here
+          //You can set the state to true to show the PrivateComponent
+          setLoggedIn(false);
+
+          if (!loggedIn) {
+            router.push('/login')
+          }
+        }, [loggedIn]);
+
+- Done with the navigation_router_push in the index.js page but hide it or comment it out all the way

@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
 const index = () => {
-  return <div>index page for the posts</div>;
-};
+  return (
+    <div>This is the main post page.</div>
+  )
+}
 
-export default index;
+export default index

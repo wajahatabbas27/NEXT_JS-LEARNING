@@ -2,13 +2,25 @@ import React from "react";
 import { useRouter } from "next/router";
 
 const slug = () => {
-  const router = useRouter();
-  const { slug, date } = router.query;
+  //methods or technique for whic we can use the useRouter tecnique
+  // const router = useRouter()
+  // const {slug} = router.query
+  const {
+    query: { slug, date },
+  } = useRouter();
+
+  // console.log(slug);
 
   return (
-    <div>
-      It is the dynamic path for every data that is coming all the way with any
-      name will be routed over here. : {slug} , {date}
+    <div
+      style={{
+        textAlign: "center",
+      }}
+    >
+      <p>
+        slug that is dynamic is <span style={{ color: "red" }}>{slug}</span> and
+        the date is <span style={{ color: "blue" }}>{date}</span>
+      </p>
     </div>
   );
 };
