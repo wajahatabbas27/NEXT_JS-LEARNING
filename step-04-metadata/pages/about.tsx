@@ -3,20 +3,22 @@ import Head from "next/head";
 import Link from "next/link";
 import Widget from "../components/Widget";
 
-const index: NextPage = () => {
+const about: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Welcome to my Next.js website</title>
+        <title>About this website</title>
       </Head>
       <div>
-        <Link href='/about'>
-          <a>About us</a>
+        <Link href='/'>
+          <a>Back to home</a>
         </Link>
       </div>
-      <Widget pageName='index' />
+      <div>
+        <Widget pageName='about' />
+      </div>
     </>
   );
 };
 
-export default index;
+export default about;
