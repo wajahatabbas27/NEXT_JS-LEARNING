@@ -14,3 +14,11 @@ meant for running data fetching using getServerSideProps or getStaticProps,
 as other pages do. Its main use cases are maintaining state between pages during
 navigation (dark/light themes, items in a cart, and so on), adding global styles, handling
 page layouts, or adding additional data to the page props.
+
+# The \_document.js page
+
+- we created the file for te document in the pages folder where we wil import document and the important html,body,.. tags which we will use there.
+
+- import Document,{ Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+
+- just created the \_document.tsx file in te pages folder which has all the document elements there.

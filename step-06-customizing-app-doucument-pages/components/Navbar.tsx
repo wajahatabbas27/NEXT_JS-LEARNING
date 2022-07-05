@@ -18,8 +18,15 @@ const Navbar: NextComponentType<NextPageContext, {}, Props> = (props) => {
         marginBottom: 25,
       }}
     >
-      <div>My Website</div>
-      <div>
+      <div style={{ padding: "20px", margin: "10px" }}>My Website</div>
+      <div
+        style={{
+          padding: "20px",
+          display: "flex",
+          justifyContent: "center",
+          margin: "10px",
+        }}
+      >
         <Link href='/'>Home</Link>
         <Link href='/about'>About</Link>
         <Link href='/contacts'>Contacts</Link>

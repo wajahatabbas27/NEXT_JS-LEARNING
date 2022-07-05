@@ -3,7 +3,17 @@ import type { NextPage } from "next";
 const contacts: NextPage = () => {
   return (
     <>
-      <div>contacts page</div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100vh",
+        }}
+      >
+        contacts page
+      </div>
     </>
   );
 };
