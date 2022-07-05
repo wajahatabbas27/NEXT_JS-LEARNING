@@ -10,8 +10,8 @@
 
 - To start with nextjs boiler plate si created with:
 
-npx create-next-app my-first-next-app --use-npm
+npx create-next-app my-first-next-app --ts
 
-- npx create-next-app <project-name> --use-npm
+- npx create-next-app <project-name> --ts
 
 - to run the server it requires : - npm run dev or yarn dev
