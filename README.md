@@ -12,6 +12,6 @@
 
 npx create-next-app my-first-next-app --ts
 
-- npx create-next-app <project-name> --ts
+- npx create-next-app project-name --ts
 
 - to run the server it requires : - npm run dev or yarn dev
