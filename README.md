@@ -15,3 +15,13 @@ npx create-next-app my-first-next-app --ts
 - npx create-next-app project-name --ts
 
 - to run the server it requires : - npm run dev or yarn dev
+
+## Topics covered in the repo are from the book REAL World Nextjs
+
+- Boiler structure
+- Different rendering strategies
+- Routing
+- Serving static assets - images
+- Metadata for SEO
+- Customization of app and document file
+- organizing folder structure

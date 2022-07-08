@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import fetch from "isomorphic-unfetch";
+// import fetch from "isomorphic-unfetch";
 
 //this function will be used to do static site generation with incremantal static regenration
 //here revalidate is used to do refetch the queries.
