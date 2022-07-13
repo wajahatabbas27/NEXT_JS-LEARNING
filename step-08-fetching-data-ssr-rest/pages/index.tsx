@@ -9,11 +9,12 @@ interface Props {
 
 interface User {
   id: string;
-  username: string;
+  title: string;
+  body: string;
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const userReq = await axios.get("https://api.rwnjs.com/04/users");
+  const userReq = await axios.get("https://jsonplaceholder.typicode.com/posts");
   // console.log(userReq.data);
 
   return {
@@ -23,19 +24,20 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 };
 
-const index: NextPage<Props> = (props: Props) => {
+const index: NextPage<Props> = ({ users }) => {
   //the best way to do is to do it by using the Props interface else we will be facing the type errors
-  const users = props.users;
+  // const users = props.users;
 
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <h1>index</h1>
       <ul>
         {users.map((user: User) => (
           <li key={user.id}>
-            <Link href={`/users/${user.username}`} passHref>
-              <a> {user.username} </a>
+            <Link href={`/users/${user.id}`} passHref>
+              <a> {user.title} </a>
             </Link>
+            {/* <p>{user.body}</p> */}
           </li>
         ))}
       </ul>
